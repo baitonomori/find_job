@@ -38,36 +38,36 @@ const WorkItem = ({content}:contentProps) => {
 
   // content.workCategoryごとに画像を変更する
   const workCategory = content.workCategory;
-  // "教育",
-  // "軽作業",
-  // "配達・運転",
-  // "販売・接客",
-  // "オフィスワーク",
-  // "イベント・キャンペーン",
-  // "専門職",
-  // "エンタメ",
-  // "アート・デザイン",
-  // "その他"
+  //  "教育"
+  //  "販売・接客"
+  //  "飲食"
+  //  "事務作業"
+  //  "農作業"
+  //  "イベント"
+  //  "クリエイティブ"
+  //  "プログラミング"
+  // "インターン・アルバイト"
+  //  "その他"
   const workCategoryImage = () => {
     switch (workCategory) {
       case "教育":
         return "/edu.png";
-      case "軽作業":
-        return "/light.png";
-      case "配達・運転":
-        return "/delivery.png";
       case "販売・接客":
         return "/sales.png";
-      case "オフィスワーク":
+      case "飲食":
+        return "/food.png";
+      case "事務作業":
         return "/office.png";
-      case "イベント・キャンペーン":
+      case "農作業":
+        return "/farm.png";
+      case "イベント":
         return "/event.png";
-      case "専門職":
-        return "/special.png";
-      case "エンタメ":
-        return "/enter  .png";
-      case "アート・デザイン":
-        return "/art.png";
+      case "クリエイティブ":
+        return "/creative.png";
+      case "プログラミング":
+        return "/programming.png";
+      case "インターンアルバイト":
+        return "/intern.png";
       case "その他":
         return "/other.png";
       default:
