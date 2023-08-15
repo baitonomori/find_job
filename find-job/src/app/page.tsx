@@ -2,18 +2,68 @@ import React from 'react';
 import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
 import Survey from './components/Survey';
-import { getContents } from './lib/spreadsheet';
+// import { getContents } from './lib/spreadsheet';
 import WorkList from './components/WorkList';
+import { Work } from './lib/contents';
 
-async function getContent() {
-  const contents = await getContents();
-  return {
-    contents
-  };
-}
+// async function getContent() {
+//   const contents = await getContents();
+//   return {
+//     contents
+//   };
+// }
 const Home: React.FC = async () => {
-  const content = await getContent();
-  console.log(content);
+  // const content = await getContent();
+  // console.log(content);
+  const content = {
+    contents: [
+      {
+        timestamp: 1648764000000,
+        name: "【アルバイト】キッチンスタッフ",
+        Elements: "飲食",
+        workCategory: "事務作業",
+        salary: 900,
+        time: "10:00~19:00",
+        people: "3人",
+        place: "福岡県福岡市博多区",
+        require: "調理経験者歓迎"
+      },
+      {
+        timestamp: 1648764000000,
+        name: "【アルバイト】キッチンスタッフ",
+        Elements: "飲食",
+        workCategory: "プログラミング",
+        salary: 900,
+        time: "10:00~19:00",
+        people: "3人",
+        place: "福岡県福岡市博多区",
+        require: "調理経験者歓迎"
+      },
+      {
+        timestamp: 1648764000000,
+        name: "【アルバイト】キッチンスタッフ",
+        Elements: "飲食",
+        workCategory: "販売・接客",
+        salary: 900,
+        time: "10:00~19:00",
+        people: "3人",
+        place: "福岡県福岡市博多区",
+        require: "調理経験者歓迎"
+      },
+      {
+        timestamp: 1648764000000,
+        name: "【アルバイト】キッチンスタッフ",
+        Elements: "飲食",
+        workCategory: "教育",
+        salary: 900,
+        time: "10:00~19:00",
+        people: "3人",
+        place: "福岡県福岡市博多区",
+        require: "調理経験者歓迎"
+      }
+    ]
+  };
+
   return (
     <>
       <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-8 max-w-5xl">

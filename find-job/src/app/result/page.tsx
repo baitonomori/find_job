@@ -1,6 +1,6 @@
 import ResultList from '../components/ResultList';
 import WorkDetail from '../components/Workdetail';
-import { getContents } from '../lib/spreadsheet';
+// import { getContents } from '../lib/spreadsheet';
 
 
 // 検索結果画面

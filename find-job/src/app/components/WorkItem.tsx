@@ -36,13 +36,54 @@ const WorkItem = ({content}:contentProps) => {
     }
   };
 
+  // content.workCategoryごとに画像を変更する
+  const workCategory = content.workCategory;
+  //  "教育"
+  //  "販売・接客"
+  //  "飲食"
+  //  "事務作業"
+  //  "農作業"
+  //  "イベント"
+  //  "クリエイティブ"
+  //  "プログラミング"
+  // "インターン・アルバイト"
+  //  "その他"
+  const workCategoryImage = () => {
+    switch (workCategory) {
+      case "教育":
+        return "/edu.png";
+      case "販売・接客":
+        return "/sales.png";
+      case "飲食":
+        return "/food.png";
+      case "事務作業":
+        return "/office.png";
+      case "農作業":
+        return "/farm.png";
+      case "イベント":
+        return "/event.png";
+      case "クリエイティブ":
+        return "/creative.png";
+      case "プログラミング":
+        return "/programming.png";
+      case "インターンアルバイト":
+        return "/intern.png";
+      case "その他":
+        return "/other.png";
+      default:
+        return "/other.png";
+    }
+  }
+
+
+
   return (
     <>
       <div className='flex flex-col group' 
            onClick={toggleModal}>
         <div className=" -z-10">
           <div className='flex justify-center rounded-t-md overflow-hidden'>
-            <WorkImage title="aaa" url="https://picsum.photos/385/245"/>
+            <WorkImage title="aaa" url={workCategoryImage()}/>
           </div>
           <div className='flex flex-col bg-primary rounded-b-md px-7 py-6'>
             <p className='text-white md:text-sm text-center font-bold h-10'>{content.name}</p>
