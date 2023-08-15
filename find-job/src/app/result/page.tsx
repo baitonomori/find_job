@@ -1,5 +1,5 @@
 import ResultList from '../components/ResultList';
-import WorkDetail from '../components/Workdetail';
+import WorkDetail from '../components/CommonWork/Workdetail';
 // import { getContents } from '../lib/spreadsheet';
 
 

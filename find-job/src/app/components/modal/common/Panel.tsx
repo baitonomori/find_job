@@ -1,8 +1,8 @@
 import React from "react";
-import WorkDetail from "../Workdetail";
+import WorkDetail from "../../CommonWork/Workdetail";
 import { IoCloseOutline } from "react-icons/io5";
 import { IconContext } from 'react-icons';
-import { Work } from "../../lib/contents";
+import { Work } from "../../../lib/contents";
 
 // モーダルのパネル部分のコンポーネント
 // WorkDetailコンポーネント+右上のバツボタンで構成

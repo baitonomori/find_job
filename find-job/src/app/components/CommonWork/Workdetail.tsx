@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import { Work } from '../lib/contents';
+import { Work } from '../../lib/contents';
 
 // 仕事詳細パネルのコンポーネント
 // オブジェクト型のデータをPropsで引数として受け取る。

@@ -2,10 +2,10 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import Modal from './modal/Modal';
-import Panel from './modal/Panel';
-import { useBodyFixed } from '../hooks/useBodyFixed';
-import { Work } from '../lib/contents';
+import Modal from '../modal/common/Modal';
+import Panel from '../modal/common/Panel';
+import { useBodyFixed } from '../../hooks/useBodyFixed';
+import { Work } from '../../lib/contents';
 
 // Topページのタイル型の仕事一覧のコンポーネント
 
@@ -83,7 +83,7 @@ const WorkItem = ({content}:contentProps) => {
            onClick={toggleModal}>
         <div className=" -z-10">
           <div className='flex justify-center rounded-t-md overflow-hidden'>
-            <WorkImage title="aaa" url={workCategoryImage()}/>
+            <WorkImage title={content.name} url={workCategoryImage()}/>
           </div>
           <div className='flex flex-col bg-primary rounded-b-md px-7 py-6'>
             <p className='text-white md:text-sm text-center font-bold h-10'>{content.name}</p>

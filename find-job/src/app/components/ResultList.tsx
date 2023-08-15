@@ -1,7 +1,7 @@
 "use client"
 
 import { useSearchParams } from "next/navigation";
-import WorkDetail from "./Workdetail";
+import WorkDetail from "./CommonWork/Workdetail";
 import { Work } from "../lib/contents";
 
 interface worklistProps {

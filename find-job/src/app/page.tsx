@@ -3,7 +3,7 @@ import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
 import Survey from './components/Survey';
 // import { getContents } from './lib/spreadsheet';
-import WorkList from './components/WorkList';
+import WorkList from './components/CommonWork/WorkList';
 import { Work } from './lib/contents';
 
 // async function getContent() {
