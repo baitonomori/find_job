@@ -15,6 +15,8 @@ import { Work } from './lib/contents';
 const Home: React.FC = async () => {
   // const content = await getContent();
   // console.log(content);
+  
+  // とりあえず仮のデータ！！！！！！
   const content = {
     contents: [
       {
