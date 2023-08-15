@@ -7,8 +7,8 @@ interface worklist{
 
 export default function TutorWorkList({worklist}:worklist){
   return (
-    worklist.map(work => (
-        <TutorWorkItem key={work.id} work={work} />
+    worklist.map(content => (
+        <TutorWorkItem key={content.id} content={content} />
     ))
   );
 }

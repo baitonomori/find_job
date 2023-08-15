@@ -34,5 +34,5 @@ export type TutorWork = {
     studentGrade: string; // 生徒の学年
     subject: string; // 教科
     salary: number; // 給与
-    terms: string; // 希望条件
+    require: string; // 希望条件
 };

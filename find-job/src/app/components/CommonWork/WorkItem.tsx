@@ -2,8 +2,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import Modal from '../modal/common/Modal';
-import Panel from '../modal/common/Panel';
+import Modal from '../modal/CommonModal/Modal';
 import { useBodyFixed } from '../../hooks/useBodyFixed';
 import { Work } from '../../lib/contents';
 
