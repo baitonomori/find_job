@@ -41,6 +41,7 @@ const TutorWorkDetail = ({ content }: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
+                賃金
                 </th>
                 <td className='text-left text-black px-6 py-3'>
                   時給{content.salary}円

@@ -38,7 +38,8 @@ const TutorWorkItem = ({content}:tutorContentProps) => {
   
   return (
     <>
-      <div className='flex flex-col group' 
+      <div className='flex flex-col group border-gray-200  rounded-md cursor-pointer 
+      shadow-[0px_0px_3px_rgba(0,0,0,0.16)]' 
           onClick={toggleModal}>
         <div className=" -z-10">
           <div className='flex justify-center rounded-t-md overflow-hidden'>

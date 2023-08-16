@@ -2,12 +2,12 @@ import { TutorWork } from "../../lib/contents";
 import TutorWorkItem from "./TutorWorkItem";
 
 interface worklist{
-  worklist: TutorWork[]
+  contentlist: TutorWork[]
 }
 
-export default function TutorWorkList({worklist}:worklist){
+export default function TutorWorkList({contentlist}:worklist){
   return (
-    worklist.map(content => (
+    contentlist.map(content => (
         <TutorWorkItem key={content.id} content={content} />
     ))
   );
