@@ -18,6 +18,11 @@ export type matchSalary = {
   salary: number;
 }
 
+export type matchCategory = {
+  id: number;
+  workCategory: string;
+}
+
 const sampleData: matchSalary[] = [
   {
     id: 1,
