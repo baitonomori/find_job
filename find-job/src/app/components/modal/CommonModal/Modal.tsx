@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import Panel from "./Panel";
-import { Work } from "../../lib/contents";
+import { Work } from "../../../lib/contents";
 
 // モーダルの開閉制御のコンポーネント
 // パネル表示部分はPanel.tsxに記述

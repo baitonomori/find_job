@@ -1,19 +1,11 @@
-import React, { Children } from 'react';
-import { Work } from '../lib/contents';
-
-// 仕事詳細パネルのコンポーネント
-// オブジェクト型のデータをPropsで引数として受け取る。
-// TOPページの仕事一覧のモーダル画面と、検索結果画面で使いまわす。
+import React from "react";
+import { TutorWork } from "../../lib/contents";
 
 interface contentDetalProps {
-  content:Work
+  content: TutorWork;
 }
 
-const WorkDetail = ({content}: contentDetalProps) => {
-  function convertTimeFormat(input: string): string {
-    return input.replace(/(\d{2})(\d{2})~(\d{2})(\d{2})/, '$1:$2~$3:$4');
-  }
-  const time = convertTimeFormat(content.time);
+const TutorWorkDetail = ({ content }: contentDetalProps) => {
   return (
     <>
       <div className=' bg-primary py-6 px-3 rounded-lg mt-5 md:min-w-[750px] min-w-[300px]'>
@@ -25,10 +17,10 @@ const WorkDetail = ({content}: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
-                  仕事内容
+                  勤務地
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {content.Elements}
+                  {content.place}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -37,7 +29,19 @@ const WorkDetail = ({content}: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
-                  賃金
+                  期間
+                </th>
+                <td className='text-left text-black px-6 py-3'>
+                  {content.time}
+                </td>
+              </tr>
+              <tr className='items-center border-b-[1.5px] border-b-secondary'>
+                <th className='
+                text-center text-primary 
+                border-r-[1.5px] border-r-secondary 
+                px-5 py-2 w-36
+                '>
+                賃金
                 </th>
                 <td className='text-left text-black px-6 py-3'>
                   時給{content.salary}円
@@ -49,10 +53,10 @@ const WorkDetail = ({content}: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
-                  時間
+                  生徒の性別
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {time}
+                  {content.studentGender}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -61,10 +65,10 @@ const WorkDetail = ({content}: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
-                  採用人数
+                  講師の性別
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {content.people}人
+                  {content.teacherGender}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -73,10 +77,22 @@ const WorkDetail = ({content}: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
-                  勤務地
+                  生徒の学年
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {content.place}
+                  {content.studentGrade}
+                </td>
+              </tr>
+              <tr className='items-center border-b-[1.5px] border-b-secondary'>
+                <th className='
+                text-center text-primary 
+                border-r-[1.5px] border-r-secondary 
+                px-5 py-2 w-36
+                '>
+                  教科
+                </th>
+                <td className='text-left text-black px-6 py-3'>
+                  {content.subject}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -98,4 +114,4 @@ const WorkDetail = ({content}: contentDetalProps) => {
   );
 }
 
-export default WorkDetail;
+export default TutorWorkDetail;
