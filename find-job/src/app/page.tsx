@@ -4,7 +4,7 @@ import Button from './components/Button';
 import Survey from './components/Survey';
 // import { getContents } from './lib/spreadsheet';
 import WorkList from './components/CommonWork/WorkList';
-import { Work } from './lib/contents';
+import { TutorWork, Work } from './lib/contents';
 import TutorWorkList from './components/TutorWork/TutorWorkList';
 
 // async function getContent() {
@@ -13,12 +13,21 @@ import TutorWorkList from './components/TutorWork/TutorWorkList';
 //     contents
 //   };
 // }
+
+export type Content = {
+  contents: Work[]
+}
+
+export type TutorContent = {
+  contents: TutorWork[]
+}
+
 const Home: React.FC = async () => {
   // const content = await getContent();
   // console.log(content);
   
   // とりあえず仮のデータ！！！！！！
-  const content = {
+  const content:Content = {
     contents: [
       {
         timestamp: 1648764000000,
@@ -67,21 +76,7 @@ const Home: React.FC = async () => {
     ]
   };
 
-
-// export type TutorWork = {
-//   [x: string]: any;
-//   timestamp: number; // タイムスタンプ,主キー
-//   place: string; // 勤務地
-//   time: string; // 期間
-//   studentGender: string; // 生徒の性別
-//   teacherGender: string; // 講師の性別
-//   studentGrade: string; // 生徒の学年
-//   subject: string; // 教科
-//   salary: number; // 給与
-//   require: string; // 希望条件
-// };
-
-  const tutorContent = {
+  const tutorContent:TutorContent = {
     contents: [
       {
         timestamp: 1648764000000,
