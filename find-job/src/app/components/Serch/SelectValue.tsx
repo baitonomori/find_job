@@ -1,76 +1,71 @@
 "use client"
-import React, {useMemo} from 'react';
+import React, {use, useCallback, useEffect, useMemo, useState} from 'react';
 import Select from 'react-select';
 import style from './SelectValue.module.scss';
 import Image from 'next/image';
 
-// 検索ボックスのセレクトボックスのコンポーネント
+// 検索値のセレクトボックスのコンポーネント
 
-// 参考サイト
-// https://dev.classmethod.jp/articles/react-select/
-
-// react-selectのブラックボックス化されたコンポーネントの中身について、アホ分かりやすくsandboxで解説してくれているサイト
-// https://tmegos.hatenablog.jp/entry/react-select-style-object
-
-export type UseSelectProps = {
+type UseSelectProps = {
   selected: matchValue | null;
-  setWork: (user: matchValue | null) => void;
+  element: string;
+  setValue: (user: matchValue | null) => void;
 };
 
+// 選択肢の型
 export type matchValue = {
   id: number;
-  salary: number;
+  value: string;
+  label: string;
 }
 
+type optionValue = {
+  index: number;
+  label: string;
+  value: string;
+}
 
-
-const sampleData: matchValue[] = [
-  {
-    id: 1,
-    salary: 900,
-  },
-  {
-    id: 2,
-    salary: 1000,
-  },
-  {
-    id: 3,
-    salary: 1100,
-  },
-  {
-    id: 4,
-    salary: 1200,
-  },
-  {
-    id: 5,
-    salary: 1300,
-  },
-  {
-    id: 6,
-    salary: 1400,
-  },
+const salaryData: matchValue[] = [
+  { id: 1, value: "899", label: "~900" },
+  { id: 2, value: "1000", label: "901~1000" },
+  { id: 3, value: "1100", label: "1001~1100" },
+  { id: 4, value: "1200", label: "1101~1200" },
+  { id: 5, value: "1300", label: "1201~1300" },
+  { id: 6, value: "1400", label: "1301~1400" },
+  { id: 7, value: "1500", label: "1401~1500" },
+  { id: 8, value: "1600", label: "1501~"},
 ];
 
-type WorkOption = {
-  label: string;
-  value: number;
-  salary: number;
-}
+const workCategoryData: matchValue[] = [
+  { id: 1, value: "教育", label: "教育" },
+  { id: 2, value: "販売・接客", label: "販売・接客" },
+  { id: 3, value: "飲食", label: "飲食" },
+  { id: 4, value: "事務作業", label: "事務作業" },
+  { id: 5, value: "農作業", label: "農作業" },
+  { id: 6, value: "イベント", label: "イベント" },
+  { id: 7, value: "クリエイティブ", label: "クリエイティブ" },
+  { id: 8, value: "プログラミング", label: "プログラミング" },
+  { id: 9, value: "インターン・アルバイト", label: "インターン・アルバイト" },
+  { id: 10, value: "その他", label: "その他" },
+];
 
-
-function convertToWork(args: WorkOption | null): matchValue | null {
+// optionElement型からmatchElement型に変換する関数
+function convertToMatch(args: optionValue | null): matchValue | null {
   if (!args) return null;
   return {
-    id: args.value,
-    salary: args.salary,
+    // toNumberは、文字列を数値に変換する関数
+    id: args.index,
+    value: args.value,
+    label: args.label,
   };
 }
 
-function convertToOption(work: matchValue): WorkOption {
+// matchElement型からoptionElement型に変換する関数
+function convertToOption(work: matchValue): optionValue {
   return {
-    label: work.salary.toString() + "~",
-    value: work.id,
-    salary: work.salary,
+    index: work.id,
+    label: work.label,
+    value: work.value,
   };
 }
 
@@ -82,29 +77,48 @@ const renderIcon = () => {
 }
 
 
-export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
+export const SelectValue: React.FC<UseSelectProps> = ({selected, element,  setValue}) => {
+  // 選択した値のデータの状態管理用
   const value = useMemo(
-    () => (selected ? convertToOption(selected) : null),
+    () => (selected ? convertToOption(selected) : null), // undefinedの時のエラーを回避してる
     [selected]
   );
+  
+  // 検索値のデータの状態管理用
+  const [optionData, setOptionData] = useState<matchValue[]>(salaryData);
 
-  const onChange = (newWork: WorkOption | null) => {
-      setWork(convertToWork(newWork));
+  // element(検索条件)の値によって、optionData(検索値)を変更する
+  useEffect(() => {
+    if (element === "salary") {
+      setOptionData(salaryData);
+      selected && setValue(convertToMatch(null));
+    }
+    else if (element === "workCategory") {
+      setOptionData(workCategoryData);
+      selected && setValue(convertToMatch(null));
+    }
+    else {
+      throw new Error("Unknown element: " + element);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [element]);
+
+  const onChange = (newWork: optionValue | null) => {
+      setValue(convertToMatch(newWork));
   };
-
   
   return (
     <>
       <Select
-        className={style.value}
-        classNamePrefix="value"
-        instanceId="work"
-        value={value}
+        className={style.value} // スタイルを指定
+        classNamePrefix="value" // Selectコンポーネントを構成している要素の各クラス名の先頭文字を指定
+        instanceId="work" // セレクトボックスのid
+        value={value} // 選択した値
         onChange={onChange}
-        options={sampleData.map(convertToOption)}
+        options={optionData.map(convertToOption)} // 選択肢の要素をmapで回してる
         components={{
-          IndicatorSeparator: () => null,
-          DropdownIndicator:() => renderIcon(),
+          IndicatorSeparator: () => null, // 下矢印の左側の仕切り線を消す
+          DropdownIndicator:() => renderIcon(), // 下矢印のアイコンを変更
         }}
       />
     </>
