@@ -9,16 +9,16 @@ import Image from 'next/image'
 // https://dev.classmethod.jp/articles/react-select/
 
 export type UseSelectProps = {
-  selected: Work | null;
-  setWork: (user: Work | null) => void;
+  selected: matchSalary | null;
+  setWork: (user: matchSalary | null) => void;
 };
 
-export type Work = {
+export type matchSalary = {
   id: number;
   salary: number;
 }
 
-const sampleData: Work[] = [
+const sampleData: matchSalary[] = [
   {
     id: 1,
     salary: 900,
@@ -52,7 +52,7 @@ type WorkOption = {
 }
 
 
-function convertToWork(args: WorkOption | null): Work | null {
+function convertToWork(args: WorkOption | null): matchSalary | null {
   if (!args) return null;
   return {
     id: args.value,
@@ -60,7 +60,7 @@ function convertToWork(args: WorkOption | null): Work | null {
   };
 }
 
-function convertToOption(work: Work): WorkOption {
+function convertToOption(work: matchSalary): WorkOption {
   return {
     label: work.salary.toString() + "~",
     value: work.id,
