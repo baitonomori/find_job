@@ -1,29 +1,30 @@
 "use client"
-import React, {useMemo} from 'react'
-import Select from 'react-select'
-import style from './WorkSelect.module.scss'
-import Image from 'next/image'
+import React, {useMemo} from 'react';
+import Select from 'react-select';
+import style from './SelectValue.module.scss';
+import Image from 'next/image';
 
 // 検索ボックスのセレクトボックスのコンポーネント
+
 // 参考サイト
 // https://dev.classmethod.jp/articles/react-select/
 
+// react-selectのブラックボックス化されたコンポーネントの中身について、アホ分かりやすくsandboxで解説してくれているサイト
+// https://tmegos.hatenablog.jp/entry/react-select-style-object
+
 export type UseSelectProps = {
-  selected: matchSalary | null;
-  setWork: (user: matchSalary | null) => void;
+  selected: matchValue | null;
+  setWork: (user: matchValue | null) => void;
 };
 
-export type matchSalary = {
+export type matchValue = {
   id: number;
   salary: number;
 }
 
-export type matchCategory = {
-  id: number;
-  workCategory: string;
-}
 
-const sampleData: matchSalary[] = [
+
+const sampleData: matchValue[] = [
   {
     id: 1,
     salary: 900,
@@ -48,7 +49,7 @@ const sampleData: matchSalary[] = [
     id: 6,
     salary: 1400,
   },
-]
+];
 
 type WorkOption = {
   label: string;
@@ -57,7 +58,7 @@ type WorkOption = {
 }
 
 
-function convertToWork(args: WorkOption | null): matchSalary | null {
+function convertToWork(args: WorkOption | null): matchValue | null {
   if (!args) return null;
   return {
     id: args.value,
@@ -65,7 +66,7 @@ function convertToWork(args: WorkOption | null): matchSalary | null {
   };
 }
 
-function convertToOption(work: matchSalary): WorkOption {
+function convertToOption(work: matchValue): WorkOption {
   return {
     label: work.salary.toString() + "~",
     value: work.id,
@@ -95,8 +96,8 @@ export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
   return (
     <>
       <Select
-        className={style.select}
-        classNamePrefix="rs"
+        className={style.value}
+        classNamePrefix="value"
         instanceId="work"
         value={value}
         onChange={onChange}

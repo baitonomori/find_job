@@ -1,0 +1,62 @@
+.element {
+  color: #3FB84B;
+  width: 6rem/* 96px */;
+  :global(div.element__control) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+    border: none;
+    border-radius: 4px 0px 0px 4px; 
+    :global(div.element__value-container) {
+      padding: 2px 0px 2px 8px;
+      :global(div.element__single-value) {
+          text-align: center;
+          font-size: 0.875rem/* 14px */;
+          line-height: 1.25rem/* 20px */;
+          color: #3FB84B;
+      }
+    }
+    :global(div.element__indicators) {
+      padding-right: 8px;
+      :global(div.element__input-container) {
+        color: #3FB84B;
+      }
+    }
+  }
+  :global(div.element__control--menu-is-open) {
+    box-shadow: 0 0 0 1px #3FB84B;
+  }
+  :global(div.element__menu){
+    border-radius: 4px 4px 4px 4px;
+    color: #3FB84B;
+    overflow: hidden;
+    :global(div.element__menu-list){
+      padding: 0;
+      z-index: -10;
+      text-align: center;
+      // div.element__optionがホバー時
+      :global(div.element__option:hover){
+        z-index: -10;
+        --tw-bg-opacity: 0.5;
+        background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        transition: background-color 0.2s ease-in-out;
+        color: #3FB84B;
+      }
+      :global(div.element__option--is-selected){
+        background-color: #3FB84B;
+        color: #fff;
+      }
+      :global(div.element__option--is-focused){
+        // background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        color: #3FB84B;
+        z-index: -10;
+        --tw-bg-opacity: 0.5;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .element__control {
+      width: 9rem/* 144px */;
+    }
+  }
+}

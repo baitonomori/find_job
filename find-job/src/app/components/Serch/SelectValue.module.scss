@@ -1,0 +1,79 @@
+// .styleSelectValue {
+//   color: #3FB84B;
+//   width: 100%;
+//   :global(div.value__control) {
+//       border: none;
+//       border-radius: 0px 4px 4px 0px; 
+//       :global(div.value__single-value) {
+//         color: #3FB84B;
+//       }
+//       :global(div.value__indicators) {
+//         padding-right: 8px;
+//         :global(div.value__input-container) {
+//           color: #3FB84B;
+//         }
+//       }
+//     }
+// }
+
+.value {
+  color: #3FB84B;
+  width: 100%;
+  :global(div.value__control) {
+    border: none;
+    border-radius: 0px 4px 4px 0px; 
+    :global(div.value__value-container) {
+      padding: 2px 0px 2px 8px;
+      :global(div.value__single-value) {
+          font-size: 0.875rem/* 14px */;
+          line-height: 1.25rem/* 20px */;
+          color: #3FB84B;
+      }
+    }
+    :global(div.value__indicators) {
+      padding-right: 8px;
+      :global(div.value__input-container) {
+        color: #3FB84B;
+      }
+    }
+  }
+  :global(div.value__control--menu-is-open) {
+    box-shadow: 0 0 0 1px #3FB84B;
+  }
+  :global(div.value__menu){
+    border-radius: 4px 4px 4px 4px;
+    color: #3FB84B;
+    overflow: hidden;
+    :global(div.value__menu-list){
+      padding: 0;
+      z-index: -10;
+      // div.value__optionがホバー時
+      :global(div.value__option:hover){
+        z-index: -10;
+        --tw-bg-opacity: 0.5;
+        background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        transition: background-color 0.2s ease-in-out;
+        color: #3FB84B;
+      }
+      :global(div.value__option--is-selected){
+        // background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        background-color: #3FB84B;
+        color: #fff;
+      }
+      :global(div.value__option--is-focused){
+        // background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        background-color: rgb(201 244 205 / var(--tw-bg-opacity));
+        color: #3FB84B;
+        z-index: -10;
+        --tw-bg-opacity: 0.5;
+      }
+
+
+    }
+  }
+  @media (min-width: 768px) {
+    .value__control {
+      width: 9rem/* 144px */;
+    }
+  }
+}
