@@ -1,30 +1,10 @@
 # find_job
 アルバイト掲示板案件
 
-## リポジトリをクローン
-```
-git clone https://github.com/smaru1111/find_job
-```
-
-## ローカルの起動
-Nodo.jsが入ってない人は、インストールしてください。<br>
-https://nodejs.org/ja
-
-入ってるか確認
-```
-node -v
-```
-
-### npm run dev
-```
-cd find-job
-npm i
-npm run dev
-```
 ## 一般のバイトのデータ型
 ```
 type Work = {
-    [x: string]: any;
+    [x: string]: any; // 項目追加を許容してる
     timestamp: number; // タイムスタンプ,主キー
     name: string; // 
     Elements: string; // 仕事内容
@@ -52,3 +32,25 @@ type TutorWork = {
     terms: string; // 希望条件
 };
 ```
+
+## リポジトリをクローン
+```
+git clone https://github.com/smaru1111/find_job
+```
+
+## ローカルの起動
+Nodo.jsが入ってない人は、インストールしてください。<br>
+https://nodejs.org/ja
+
+入ってるか確認
+```
+node -v
+```
+
+### npm run dev
+```
+cd find-job
+npm i
+npm run dev
+```
+
