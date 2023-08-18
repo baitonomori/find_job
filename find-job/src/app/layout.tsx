@@ -23,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${notojp.className}`+" tracking-widest"}>
-        <Header></Header>
-        {children}
-        <Footer></Footer>
+        <div className="flex flex-col min-h-screen justify-between">
+          <Header></Header>
+          {children}
+          <Footer></Footer>
+        </div>
       </body>
     </html>
   )

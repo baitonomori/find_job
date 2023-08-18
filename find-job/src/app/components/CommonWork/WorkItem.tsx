@@ -81,13 +81,13 @@ const WorkItem = ({content}:contentProps) => {
       <div className='flex flex-col group border-gray-200  rounded-md cursor-pointer 
         shadow-[0px_0px_3px_rgba(0,0,0,0.16)]' 
         onClick={toggleModal}>
-        <div className=" -z-10">
+        <div className="-z-10 h-full grid grid-rows-[auto_1fr]">
           <div className='flex justify-center rounded-t-md overflow-hidden'>
             <WorkImage title={content.name} url={workCategoryImage()}/>
           </div>
-          <div className='flex flex-col bg-primary rounded-b-md px-7 py-6'>
-            <p className='text-white md:text-sm text-center font-bold h-10'>{content.name}</p>
-            <p className='text-white text-[5px] text-center mt-2 h-8'>{content.Elements}</p>
+          <div className='flex flex-col bg-primary rounded-b-md px-7 py-6 my-0'>
+            <p className='text-white md:text-sm text-xs text-center font-bold line-clamp-2'>{content.name}</p>
+            <p className='text-white text-[5px] text-center md:mt-5 mt-2'>{content.Elements}</p>
           </div>
         </div>
       </div>
