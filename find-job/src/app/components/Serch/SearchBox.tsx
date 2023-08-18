@@ -24,14 +24,14 @@ const SearchBox = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-20 w-full md:px-14 px-8 py-7 rounded-xl text-white bg-primary">
-        <h1 className="text-xl text-center">仕事を探す</h1>
+      <div className="flex flex-col justify-center items-center mt-20 md:text-sm text-xs w-full md:px-14 px-8 py-7 rounded-xl text-white bg-primary">
+        <h1 className="md:text-xl text-sm text-center">仕事を探す</h1>
         <div className="flex mt-5 mx-auto w-full">
           <SelectElement selected={element} setElement={setElement}/>
           <SelectValue selected={value} element={element.element} setValue={setValue}/>
         </div>
         <Link href={`/result?${element.element}=${value?.value}`}>
-          <Button type="submit" className="text-base md:!px-10 !px-8">
+          <Button type="submit" className=" md:!px-10 !px-8">
             検索する
           </Button>
         </Link>

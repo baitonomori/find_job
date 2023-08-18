@@ -106,7 +106,7 @@ const Home: React.FC = async () => {
 
   return (
     <>
-      <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-8 max-w-5xl">
+      <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-5 max-w-5xl">
         {/* 検索ボックス */}
         <SearchBox/>
         <h2 className="text-xl text-primary font-bold text-center mt-20">仕事一覧</h2>
