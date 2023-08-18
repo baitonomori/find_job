@@ -6,6 +6,7 @@ import Survey from './components/Survey';
 import WorkList from './components/CommonWork/WorkList';
 import { TutorWork, Work } from './lib/contents';
 import TutorWorkList from './components/TutorWork/TutorWorkList';
+import PostJob from './components/PostJob';
 
 // async function getContent() {
 //   const contents = await getContents();
@@ -36,7 +37,7 @@ const Home: React.FC = async () => {
         workCategory: "事務作業",
         salary: 900,
         time: "10:00~19:00",
-        people: "3人",
+        people: "3",
         place: "福岡県福岡市博多区",
         require: "調理経験者歓迎"
       },
@@ -47,7 +48,7 @@ const Home: React.FC = async () => {
         workCategory: "プログラミング",
         salary: 900,
         time: "10:00~19:00",
-        people: "3人",
+        people: "3",
         place: "福岡県福岡市博多区",
         require: "調理経験者歓迎"
       },
@@ -58,7 +59,7 @@ const Home: React.FC = async () => {
         workCategory: "販売・接客",
         salary: 900,
         time: "10:00~19:00",
-        people: "3人",
+        people: "3",
         place: "福岡県福岡市博多区",
         require: "調理経験者歓迎"
       },
@@ -69,7 +70,7 @@ const Home: React.FC = async () => {
         workCategory: "教育",
         salary: 900,
         time: "10:00~19:00",
-        people: "3人",
+        people: "3",
         place: "福岡県福岡市博多区",
         require: "調理経験者歓迎"
       }
@@ -121,30 +122,8 @@ const Home: React.FC = async () => {
         </div>
         {/* アンケートパネル */}
         {/* <Survey/> */}
-        {/* 求人掲載パネル*/}
-        {/* <div className=' relative bg-primary clip'>
-          <style>{`.clip {clip-path: inset(1px round 12px);}`}</style>
-          <div className='flex flex-row justify-between  px-16 py-16  mt-14'>
-            <div className='flex flex-col'>
-              <p className='text-white text-xl text-left'>
-                あなたにピッタリな<br/>
-                学生とマッチング
-              </p>
-              <p className='text-white text-[10px] lg:text-xs text-left mt-2'>
-                サイトに求人情報を掲載しませんか？
-              </p>
-            </div>
-            <div className='flex'>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVk0oUKfcUwaAilIpjue98KHPhu3KXFKF3W4EgcjcO8GVrdA/viewform?embedded=true" target="_blank">
-                <Button type="submit" className='text-xs'>
-                  投稿依頼をする
-                </Button>
-              </a>
-            </div>
-          </div>
-          <div className=' absolute -z-10 md:top-[-80px] top-[-40px] md:right-20 right-10 md:w-[320px] w-[260px] md:h-[320px] h-[260px] bg-white opacity-50 rounded-[50%]'>
-          </div>
-        </div> */}
+        {/* 求掲載パネル*/}
+        {/* <PostJob /> */}
       </div>
     </>
   );
