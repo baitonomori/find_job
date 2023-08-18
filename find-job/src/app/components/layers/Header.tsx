@@ -6,10 +6,10 @@ const Header: React.FC = () => {
   return (
     <>
       <header className=" bg-primary ">
-        <div className="flex justify-between items-center text-white text-sm container md:px-14 px-8 py-[27px] my-0 mx-auto max-w-5xl">
+        <div className="flex justify-between items-center text-white md:text-sm text-xs container md:px-14 px-5 py-[27px] my-0 mx-auto max-w-5xl">
           <Link href='/' className="hover:opacity-60 transition-opacity duration-500 ease-out">バイトの森</Link>
           <nav>
-            <ul className="flex space-x-4 text-sl">
+            <ul className="flex md:space-x-4">
               <li className=" mr-2">
                 <Link href="/" className=' hover:opacity-60 transition-opacity duration-500 ease-out'>仕事を探す</Link>
               </li>
