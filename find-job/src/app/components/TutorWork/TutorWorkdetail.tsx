@@ -9,7 +9,7 @@ const TutorWorkDetail = ({ content }: contentDetalProps) => {
   return (
     <>
       <div className=' bg-primary py-6 px-3 rounded-lg mt-5 w-full md:min-w-[675px] min-w-[80vw] md:max-w-5xl'>
-        <table className=' bg-white rounded-xl border-none last:[&_tr]:border-none mx-auto w-full'>
+        <table className=' bg-white rounded-xl border-none last:[&_tr]:border-none mx-auto w-full md:text-base text-sm'>
             <tbody>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
                 <th className='

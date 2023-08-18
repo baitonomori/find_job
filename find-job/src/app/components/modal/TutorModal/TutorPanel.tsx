@@ -15,10 +15,10 @@ type Props = {
 
 const TutorPanel: React.FC<Props> = props => {
   return (
-    <section className=" z-50 relative">
-      <div className=" px-11">
+    <section className=" z-50 relative w-full md:min-w-[675px] min-w-[80vw] md:max-w-5xl">
+      <div className=" md:px-14 px-5">
         <TutorWorkDetail content={props.content}/>
-        <button onClick={props.close} className=" [&>*]:pointer-events-none  z-[51] absolute right-[30px] top-[10px] rounded-[50%] p-2 bg-primary">
+        <button onClick={props.close} className=" [&>*]:pointer-events-none  z-[51] absolute md:right-[30px] right-[6px] top-[10px] rounded-[50%] p-2 bg-primary">
           <IconContext.Provider value={{ color: "white", size: "2em" }}>
             <IoCloseOutline />
           </IconContext.Provider>
