@@ -26,14 +26,12 @@ type optionValue = {
 }
 
 const salaryData: matchValue[] = [
-  { id: 1, value: "899", label: "~900" },
-  { id: 2, value: "1000", label: "901~1000" },
-  { id: 3, value: "1100", label: "1001~1100" },
-  { id: 4, value: "1200", label: "1101~1200" },
-  { id: 5, value: "1300", label: "1201~1300" },
-  { id: 6, value: "1400", label: "1301~1400" },
-  { id: 7, value: "1500", label: "1401~1500" },
-  { id: 8, value: "1600", label: "1501~"},
+  { id: 1, value: "800", label: "~899" },
+  { id: 2, value: "900", label: "900~999" },
+  { id: 3, value: "1000", label: "1000~1199" },
+  { id: 4, value: "1200", label: "1200~1399" },
+  { id: 5, value: "1400", label: "1400~1599" },
+  { id: 6, value: "1600", label: "1600~"},
 ];
 
 const workCategoryData: matchValue[] = [
@@ -42,9 +40,9 @@ const workCategoryData: matchValue[] = [
   { id: 3, value: "飲食", label: "飲食" },
   { id: 4, value: "事務作業", label: "事務作業" },
   { id: 5, value: "農作業", label: "農作業" },
-  { id: 6, value: "イベント", label: "イベント" },
-  { id: 7, value: "クリエイティブ", label: "クリエイティブ" },
-  { id: 8, value: "プログラミング", label: "プログラミング" },
+  { id: 6, value: "イベント系", label: "イベント" },
+  { id: 7, value: "クリエイティブ系", label: "クリエイティブ" },
+  { id: 8, value: "プログラミング系", label: "プログラミング" },
   { id: 9, value: "インターン・アルバイト", label: "インターン・アルバイト" },
   { id: 10, value: "その他", label: "その他" },
 ];

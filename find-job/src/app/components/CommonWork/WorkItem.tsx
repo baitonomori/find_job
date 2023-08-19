@@ -65,7 +65,7 @@ const WorkItem = ({content}:contentProps) => {
         return "/creative.png";
       case "プログラミング系":
         return "/programming.png";
-      case "インターンアルバイト":
+      case "インターン・アルバイト":
         return "/intern.png";
       case "その他":
         return "/other.png";
