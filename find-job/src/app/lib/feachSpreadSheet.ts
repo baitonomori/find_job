@@ -1,3 +1,4 @@
+import { Work } from "./contents";
 
 const SCRIPT_ID = process.env.NEXT_PUBLIC_SCRIPT_ID
 const url = `https://script.google.com/macros/s/${SCRIPT_ID}/exec`;
@@ -11,7 +12,7 @@ export const getAllData = async(target:string) => {
       throw new Error("fetch失敗");
     }
     const data = await res.json();
-    const filteredData = data.filter((item: any[])=> item[3] === target);
+    const filteredData = data.filter((item: Work)=> item[3] === target);
     if(data && target == "その他"){
       const formatedData = filteredData.map((item: any[]) => ({
         timestamp: item[0],
@@ -27,7 +28,7 @@ export const getAllData = async(target:string) => {
       return formatedData;
     }
     if(data && target == "家庭教師"){
-      const formatedData = filteredData.map((item: any[]) => ({
+      const formatedData = filteredData.map((item: Work) => ({
         timestamp: item[0],
         place: item[4],
         time: item[5],
@@ -65,18 +66,22 @@ export const getSearchResult = async(select:string, min:number, max:number, cate
       throw new Error("fetch失敗");
     }
     const data = await res.json();
-    const formatedData = data.map((item: any[]) => ({
-      timestamp: item[0],
-      name: item[13],
-      Elements: item[12],
-      workCategory: item[14],
-      salary: item[15],
-      time: item[16],
-      people: item[17],
-      place: item[18],
-      require: item[19]
-    }))
-    return formatedData;
+    if(data){
+      const formatedData = data.map((item: Work) => ({
+        timestamp: item[0],
+        name: item[13],
+        Elements: item[14],
+        workCategory: item[12],
+        salary: item[15],
+        time: item[16],
+        people: item[17],
+        place: item[18],
+        require: item[19]
+      }))
+      console.log(formatedData)
+      return formatedData;
+    }
+    return [];
   } catch (error) {
     console.error("[error]", error);
   }
