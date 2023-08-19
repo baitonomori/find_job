@@ -4,7 +4,9 @@ const url = `https://script.google.com/macros/s/${SCRIPT_ID}/exec`;
 // 全取得
 export const getAllData = async(target:string) => {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      cache: "no-store",
+    });
     if (!res.ok) {
       throw new Error("fetch失敗");
     }
@@ -14,8 +16,8 @@ export const getAllData = async(target:string) => {
       const formatedData = filteredData.map((item: any[]) => ({
         timestamp: item[0],
         name: item[13],
-        Elements: item[12],
-        workCategory: item[14],
+        Elements: item[14],
+        workCategory: item[12],
         salary: item[15],
         time: item[16],
         people: item[17],
