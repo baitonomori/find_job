@@ -59,13 +59,13 @@ const WorkItem = ({content}:contentProps) => {
         return "/office.png";
       case "農作業":
         return "/farm.png";
-      case "イベント":
+      case "イベント系":
         return "/event.png";
-      case "クリエイティブ":
+      case "クリエイティブ系":
         return "/creative.png";
-      case "プログラミング":
+      case "プログラミング系":
         return "/programming.png";
-      case "インターンアルバイト":
+      case "インターン・アルバイト":
         return "/intern.png";
       case "その他":
         return "/other.png";

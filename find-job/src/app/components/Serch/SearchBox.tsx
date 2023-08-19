@@ -30,7 +30,7 @@ const SearchBox = () => {
           <SelectElement selected={element} setElement={setElement}/>
           <SelectValue selected={value} element={element.element} setValue={setValue}/>
         </div>
-        <Link href={`/result?${element.element}=${value?.value}`}>
+        <Link href={`/result?select=${element.element}&value=${value?.value}`}>
           <Button type="submit" className=" md:!px-10 !px-8">
             検索する
           </Button>
