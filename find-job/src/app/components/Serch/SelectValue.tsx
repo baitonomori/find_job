@@ -40,9 +40,9 @@ const workCategoryData: matchValue[] = [
   { id: 3, value: "飲食", label: "飲食" },
   { id: 4, value: "事務作業", label: "事務作業" },
   { id: 5, value: "農作業", label: "農作業" },
-  { id: 6, value: "イベント系", label: "イベント" },
-  { id: 7, value: "クリエイティブ系", label: "クリエイティブ" },
-  { id: 8, value: "プログラミング系", label: "プログラミング" },
+  { id: 6, value: "イベント系", label: "イベント系系" },
+  { id: 7, value: "クリエイティブ系", label: "クリエイティブ系" },
+  { id: 8, value: "プログラミング系", label: "プログラミング系系" },
   { id: 9, value: "インターン・アルバイト", label: "インターン・アルバイト" },
   { id: 10, value: "その他", label: "その他" },
 ];
