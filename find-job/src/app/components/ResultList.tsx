@@ -10,16 +10,20 @@ const ResultList = async() => {
   var max = 0;
   var category = "";
   
-  const searchParams= useSearchParams();
+  const searchParams:any= useSearchParams();
   const select = searchParams.get("select");
   const value = searchParams.get("value");
   console.log("select:",select);
   console.log("value:",value);
   if(select == "salary"){
     min = Number(value);
-    if(min < 1000){
-      max = min+100;
-    }else if (min > 1600){
+    if(min < 900){
+      max = min + 100;
+      min = 0;
+    }else if (min == 900){
+      max = min + 100;
+    }
+    else if (min > 1200){
       max = 10000;
     }else{
       max = min + 200;

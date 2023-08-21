@@ -26,12 +26,11 @@ type optionValue = {
 }
 
 const salaryData: matchValue[] = [
-  { id: 1, value: "800", label: "~899" },
-  { id: 2, value: "900", label: "900~999" },
-  { id: 3, value: "1000", label: "1000~1199" },
-  { id: 4, value: "1200", label: "1200~1399" },
-  { id: 5, value: "1400", label: "1400~1599" },
-  { id: 6, value: "1600", label: "1600~"},
+  { id: 1, value: "800", label: "~900" },
+  { id: 2, value: "900", label: "900~1000" },
+  { id: 3, value: "1000", label: "1000~1200" },
+  { id: 4, value: "1200", label: "1200~1400" },
+  { id: 5, value: "1400", label: "1400~" },
 ];
 
 const workCategoryData: matchValue[] = [
