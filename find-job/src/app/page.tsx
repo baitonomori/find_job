@@ -40,7 +40,7 @@ const Home: React.FC = async () => {
           <TutorWorkList contentlist={tutorContent}/>
         </div>
         {/* アンケートパネル */}
-        {/* <Survey/> */}
+        <Survey/>
         {/* 求掲載パネル*/}
         {/* <PostJob /> */}
       </div>
