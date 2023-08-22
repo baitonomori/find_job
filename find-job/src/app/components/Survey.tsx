@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import Link from 'next/link';
 
 // アンケート案内パネルのコンポーネント
 
@@ -9,9 +10,11 @@ const Survey = () => {
       <p className='text-white md:text-xl text-base text-center mt-2'>
         このサイトについてアンケートのご協力をお願いします！
       </p>
-      <Button type="submit" className='text-xs'>
-        アンケートに答える
-      </Button>
+      <Link href="https://docs.google.com/forms/d/10L1AprJAtgJmV2O2C-QIl4F7NsNETDbG57NWWrMxw54/edit" className='flex md:text-xl text-sm'>
+        <Button type="submit" className='text-xs'>
+          アンケートに答える
+        </Button>
+      </Link>
     </div>
   );
 }
