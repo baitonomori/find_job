@@ -101,7 +101,8 @@ const TutorWorkDetail = ({ content }: contentDetalProps) => {
                 border-r-[1.5px] border-r-secondary 
                 px-5 py-2 w-36
                 '>
-                  希望条件
+                  希望条件<br></br>
+                  (その他)
                 </th>
                 <td className='text-left text-black px-6 py-3'>
                   {content.require}
