@@ -16,14 +16,14 @@ export const getAllData = async(target:string) => {
     if(data && target == "その他"){
       const formatedData = filteredData.map((item: any[]) => ({
         timestamp: item[0],
-        name: item[13],
-        Elements: item[14],
-        workCategory: item[12],
-        salary: item[15],
-        time: item[16],
-        people: item[17],
-        place: item[18],
-        require: item[19]
+        name: item[12],
+        Elements: item[13],
+        workCategory: item[11],
+        salary: item[14],
+        time: item[15],
+        people: item[16],
+        place: item[17],
+        require: item[18]
       }))
       return formatedData;
     }
