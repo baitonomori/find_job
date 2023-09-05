@@ -10,7 +10,7 @@ const Survey = () => {
       <p className='text-white md:text-xl text-base text-center mt-2'>
         このサイトについてアンケートのご協力をお願いします！
       </p>
-      <Link href="https://docs.google.com/forms/d/10L1AprJAtgJmV2O2C-QIl4F7NsNETDbG57NWWrMxw54/edit" className='flex md:text-xl text-sm'>
+      <Link href="https://docs.google.com/forms/d/1GoNxYG3_pbQD6b8aB05VJ4n8mn7exBbBvuO7xMxp4ZI" className='flex md:text-xl text-sm'>
         <Button type="submit" className='text-xs'>
           アンケートに答える
         </Button>

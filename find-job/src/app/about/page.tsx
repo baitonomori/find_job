@@ -13,7 +13,7 @@ const About = () => {
           <p className="md:text-sm text-xs text-black text-left mt-2">
             ①当サイトで大学に来ている求人を知る<br />
             ②大学のアルバイト掲示板により細かい求人情報を確認しに行く<br />
-            ③個人、または学生生活課にて応募する<br />
+            ③個人で直接応募する(家庭教師のみ学生生活課へ応募する)<br />
           </p>
           <p className="md:text-base text-sm text-primary text-left mt-6">
             ●当サイトの運営者について
@@ -27,7 +27,7 @@ const About = () => {
           </p>
           <p className="md:text-sm text-xs text-black text-left mt-2">
             掲載期間は1ヶ月ですが、それよりも早く求人が取り下げられる可能性もあります。応募の際は直接大学の掲示板へお越し頂くか、学生生活課へのご確認をお願いいたします。<br />
-            今後応募のための連絡先も当サイトに記載できる可能性もあるので、アンケートまでご要望や当サイトへの感想をお願いいたします。
+            今後アップデートも考えているので、アンケートまでご要望や当サイトへの感想をお願いいたします。
           </p>
         </div>
         {/* <Survey /> */}
