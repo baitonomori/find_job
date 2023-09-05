@@ -32,12 +32,11 @@ export const getAllData = async(target:string) => {
         timestamp: item[0],
         place: item[4],
         time: item[5],
-        studentGender: item[6],
-        teacherGender: item[7],
-        studentGrade: item[8],
-        subject: item[9],
-        salary: item[10],
-        require: item[11]
+        teacherGender: item[6],
+        studentGrade: item[7],
+        subject: item[8],
+        salary: item[9],
+        require: item[10]
       }))
       return formatedData;
     }
