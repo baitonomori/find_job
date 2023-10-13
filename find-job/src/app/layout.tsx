@@ -22,6 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYVL6Y1VM1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-YYVL6Y1VM1');
+      </script>
       <body className={`${notojp.className}`+" tracking-widest"}>
         <div className="flex flex-col min-h-screen justify-between">
           <Header></Header>
