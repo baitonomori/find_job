@@ -18,10 +18,6 @@ const SearchBox = () => {
   // 検索値の状態管理
   const [value, setValue] = useState<matchValue | null>(null);
 
-  console.log("element", element);
-  console.log("value", value);
-  
-
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-20 md:text-sm text-xs w-full md:px-14 px-8 py-7 rounded-xl text-white bg-primary">

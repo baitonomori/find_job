@@ -77,7 +77,6 @@ export const getSearchResult = async(select:string, min:number, max:number, cate
         place: item[17],
         require: item[18]
       }))
-      console.log(formatedData)
       return formatedData;
     }
     return [];

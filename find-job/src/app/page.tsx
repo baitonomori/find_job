@@ -20,9 +20,6 @@ export type TutorContent = {
 const Home: React.FC = async () => {
   const content = await getAllData("その他");
   const tutorContent = await getAllData("家庭教師")
-  console.log(content);
-  console.log(tutorContent);
-  
 
   return (
     <>

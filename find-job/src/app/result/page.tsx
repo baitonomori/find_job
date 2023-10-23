@@ -1,7 +1,5 @@
 import ResultList from '../components/ResultList';
 
-
-
 // 検索結果画面
 
 const Result: React.FC = async () => {

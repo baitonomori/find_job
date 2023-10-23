@@ -13,8 +13,6 @@ const ResultList = async() => {
   const searchParams:any= useSearchParams();
   const select = searchParams.get("select");
   const value = searchParams.get("value");
-  console.log("select:",select);
-  console.log("value:",value);
   if(select == "salary"){
     min = Number(value);
     if(min < 900){

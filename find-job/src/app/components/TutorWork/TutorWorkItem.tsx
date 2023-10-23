@@ -28,7 +28,6 @@ const TutorWorkItem = ({content}:tutorContentProps) => {
 
   // モーダルを開閉する関数
   const toggleModal = (e: any) => {
-    console.log(e.target);
     if (e.target === e.currentTarget) {
       setIsOpenModal(!isOpenModal);
       setBodyFixed(!bodyFixed);
